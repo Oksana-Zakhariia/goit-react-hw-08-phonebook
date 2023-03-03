@@ -1,22 +1,32 @@
 export const theme = {
   colors: {
-    mainText: 'black',
-    greyText: 'darkslategray',
-    white: 'white',
-    mainBackgroundcolor: 'lightsteelblue',
-    mainBorderColor: 'slateblue',
-    blueBackgroundColor: 'aliceblue',
+    accent: '#f64f59',
+    white: '#ffffff',
+    light: 'rgba(255,255,255,.5)',
+    dark: '#240b36',
+    primary: '#22a6b3',
+    mainBackground: ['linear-gradient(to top, #0f2027, #203a43, #2c5364)'],
+    imageBackground: ['red', 'linear-gradient (90deg, #ff9966,#ff5e62'],
   },
-  fonts: {
-    mainFontSize: '18px',
-    largeFontSize: '24px',
-    normalWeight: '400',
-    boldWeight: '700',
+  fontSizes: {
+    small: '14px',
+    medium: '18px',
+    large: '22px',
+    xl: '30px',
+    xxl: '34px',
+    xxxl: '42px',
   },
-  shadow:
-    'rgb(0 0 0 / 20%) 0px 3px 3px -2px, rgb(0 0 0 / 14%) 0px 3px 4px 0px, rgb(0 0 0 / 12%) 0px 1px 8px 0px;',
+  breakpoints: {
+    xs: '320px',
+    s: '768px',
+    m: '1024px',
+    l: '1280px',
+    xl: '1440px',
+  },
+  animations: {
+    cubicBezier: 'cubic-bezier(0, 0.110, 0.35, 2);',
+  },
   spacing: {
-    small: '20px',
-    large: '40px',
+    step: 4,
   },
 };

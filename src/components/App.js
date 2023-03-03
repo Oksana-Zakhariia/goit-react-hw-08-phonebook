@@ -25,7 +25,7 @@ export const App = () => {
   return isRefreshing ? (
     <b>Refreshing user...</b>
   ) : (
-    <>
+    <div>
       {' '}
       <ThemeProvider theme={theme}>
         <Routes>
@@ -61,6 +61,6 @@ export const App = () => {
           </Route>
         </Routes>
       </ThemeProvider>
-    </>
+    </div>
   );
 };

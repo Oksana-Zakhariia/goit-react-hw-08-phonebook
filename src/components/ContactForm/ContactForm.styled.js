@@ -16,10 +16,5 @@ export const FormLabel = styled.label`
   margin-right: ${props => props.theme.spacing.large};
 `;
 export const FormButton = styled.button`
-  width: 150px;
-  height: 40px;
-  background-color: ${props => props.theme.colors.mainBorderColor};
-  color: ${props => props.theme.colors.white};
-  border: 1px solid ${props => props.theme.colors.mainBorderColor};
-  border-radius: 10px;
+  border: 2px solid ${props => props.theme.colors.mainBorderColor};
 `;
