@@ -21,7 +21,7 @@ export const SearchLabel = styled.label`
   align-items: center;
 `;
 export const SearchFilter = styled.input`
-  padding: ${props => props.theme.spacing.step * 3}px;
+  padding: ${props => props.theme.spacing.step * 2}px;
   border: 4px solid transparent;
   border-radius: ${props => props.theme.spacing.step * 4}px;
   outline: none;
