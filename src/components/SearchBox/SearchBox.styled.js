@@ -1,17 +1,28 @@
 import styled from 'styled-components';
-export const InputLabel = styled.label`
-  color: ${props => props.theme.colors.greyText};
-  font-size: ${props => props.theme.fonts.largeFontSize};
-  margin-right: auto;
-  margin-left: auto;
+export const Box = styled.div`
+  width: 350px;
   display: flex;
-  gap: ${props => props.theme.spacing.small};
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: ${props => props.theme.spacing.step * 5}px;
+  border: 4px solid ${({ color }) => color ?? '#fff'};
+  border-radius: ${props => props.theme.spacing.step * 4}px;
+  transition: transform 0.5s ${props => props.theme.animations.cubicBezier};
+  padding: 20px;
+  margin-top: ${props => props.theme.spacing.step * 10}px;
+  margin-left: auto;
+  margin-right: auto;
+`;
+export const SearchLabel = styled.label`
+  gap: ${props => props.theme.spacing.step * 3}px;
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
   align-items: center;
 `;
-export const Filter = styled.input`
-  padding: 10px;
-  box-shadow: ${props => props.theme.shadow};
-  border-radius: 10px;
-  border: 2px solid ${props => props.theme.colors.mainBorderColor};
+export const SearchFilter = styled.input`
+  padding: ${props => props.theme.spacing.step * 3}px;
+  border: 4px solid transparent;
+  border-radius: ${props => props.theme.spacing.step * 4}px;
   outline: none;
 `;

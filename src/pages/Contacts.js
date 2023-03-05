@@ -5,7 +5,8 @@ import { SearchBox } from 'components/SearchBox/Searchbox';
 export default function Contacts() {
   return (
     <div>
-      Contacts
+      <h1>Here you can add or remote your contacts</h1>
+
       <ContactForm></ContactForm>
       <SearchBox></SearchBox>
       <ContactList />

@@ -1,7 +1,7 @@
 import React from 'react';
-import { Formik, Form } from 'formik';
+import { Formik } from 'formik';
 import * as Yup from 'yup';
-import { FormButton, Input, FormLabel } from './ContactForm.styled';
+import { FormButton, Input, FormLabel, Forma } from './ContactForm.styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { getContacts } from 'redux/contacts/selectors';
 import { addContact } from 'redux/contacts/operations';
@@ -48,7 +48,7 @@ export const ContactForm = () => {
         onSubmit={handleSubmit}
       >
         {({ errors, touched }) => (
-          <Form>
+          <Forma>
             <FormLabel htmlFor="name">
               Name
               <Input name="name" />
@@ -63,7 +63,7 @@ export const ContactForm = () => {
             </FormLabel>
 
             <FormButton type="submit">Submit</FormButton>
-          </Form>
+          </Forma>
         )}
       </Formik>
     </div>
