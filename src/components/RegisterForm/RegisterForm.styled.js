@@ -18,6 +18,9 @@ export const Input = styled.input`
   border: 4px solid transparent;
   border-radius: ${props => props.theme.spacing.step * 4}px;
   outline: none;
+  &:focus {
+    box-shadow: 0px 2px 10px 2px ${props => props.theme.colors.primary};
+  }
 `;
 export const Label = styled.label`
   gap: ${props => props.theme.spacing.step * 3}px;
@@ -27,12 +30,18 @@ export const Label = styled.label`
   align-items: center;
 `;
 export const Button = styled.button`
-  border: 4px solid ${props => props.theme.colors.light};
+  border: 2px solid ${props => props.theme.colors.primary};
   border-radius: ${props => props.theme.spacing.step * 4}px;
-  background-color: ${props => props.theme.colors.light};
-  color: ${props => props.theme.colors.dark};
+  background-color: ${props => props.theme.colors.mainBackground};
+  color: ${props => props.theme.colors.primary};
   font-weight: 500;
-  padding: ${props => props.theme.spacing.step * 3}px;
-  width: 210px;
-  font-size: ${props => props.theme.fontSizes.large};
+  padding: ${props => props.theme.spacing.step * 1}px;
+  width: 150px;
+  font-size: ${props => props.theme.fontSizes.medium};
+  &:hover,
+  &:focus {
+    background-color: ${props => props.theme.colors.primary};
+    box-shadow: 0px 2px 10px 2px ${props => props.theme.colors.primary};
+    color: ${props => props.theme.colors.dark};
+  }
 `;

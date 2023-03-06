@@ -20,7 +20,6 @@ export const Greeting = styled.p`
   }
 `;
 export const Button = styled.button`
-  border: 1px solid ${props => props.theme.colors.light};
   border-radius: ${props => props.theme.spacing.step * 4}px;
   background-color: ${props => props.theme.colors.mainBackground};
   color: ${props => props.theme.colors.primary};
@@ -28,4 +27,16 @@ export const Button = styled.button`
   padding: ${props => props.theme.spacing.step * 1}px;
   width: 150px;
   font-size: ${props => props.theme.fontSizes.medium};
+  &:hover,
+  &:focus {
+    background-color: ${props => props.theme.colors.light};
+    box-shadow: 0px 2px 10px 2px ${props => props.theme.colors.light};
+  }
+`;
+export const UserMenuContainer = styled.div`
+  align-items: center;
+  width: 250px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 `;

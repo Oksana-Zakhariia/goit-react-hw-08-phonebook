@@ -4,6 +4,8 @@ export const Link = styled(NavLink)`
   display: flex;
   grid-gap: ${props => props.theme.spacing.step * 5}px;
   color: ${props => props.theme.colors.white};
+  padding: 5px;
+  align-text: center;
   @media (min-width: ${props => props.theme.breakpoints.s}) {
     font-size: ${props => props.theme.fontSizes.medium};
 
@@ -16,5 +18,11 @@ export const Link = styled(NavLink)`
   }
   @media (min-width: ${props => props.theme.breakpoints.l}) {
     margin: ${props => props.theme.spacing.step * 8}px;
+  }
+  &:hover,
+  &:focus {
+    background-color: ${props => props.theme.colors.primary};
+    box-shadow: 0px 2px 10px 2px ${props => props.theme.colors.primary};
+    border-radius: ${props => props.theme.spacing.step * 4}px;
   }
 `;
