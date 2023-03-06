@@ -1,6 +1,6 @@
 import { ContactForm } from 'components/ContactForm/ContactForm';
 import { ContactList } from 'components/ContactList/ContactList';
-import { SearchBox } from 'components/SearchBox/Searchbox';
+// import { SearchBox } from 'components/SearchBox/Searchbox';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchContacts } from 'redux/contacts/operations';
@@ -17,7 +17,7 @@ export default function Contacts() {
       <h1>Here you can add or remote your contacts</h1>
 
       <ContactForm></ContactForm>
-      <SearchBox></SearchBox>
+      {/* <SearchBox></SearchBox> */}
       <div>{isLoading && 'Request in progress...'}</div>
       <ContactList />
     </div>

@@ -2,6 +2,7 @@ import { useSelector } from 'react-redux';
 import { Contact } from 'components/Contact/Contact';
 import { getContacts, getFilter } from 'redux/contacts/selectors';
 import { List } from './ContactList.styled';
+import { SearchBox } from 'components/SearchBox/Searchbox';
 const getVisibleContacts = (contacts, filter) => {
   return contacts.filter(contact =>
     contact.name.toLowerCase().includes(filter.toLowerCase())
@@ -16,6 +17,7 @@ export const ContactList = () => {
 
   return (
     <List>
+      <SearchBox></SearchBox>
       {visibleContacts.map(contact => {
         return (
           <li key={contact.id}>

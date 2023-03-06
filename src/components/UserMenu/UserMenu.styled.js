@@ -6,23 +6,26 @@ export const Greeting = styled.p`
     font-size: ${props => props.theme.fontSizes.medium};
 
     margin: ${props => props.theme.spacing.step * 4}px;
+    margin-left: 0px;
   }
   @media (min-width: ${props => props.theme.breakpoints.m}) {
     font-size: ${props => props.theme.fontSizes.large};
 
     margin: ${props => props.theme.spacing.step * 6}px;
+    margin-left: 0px;
   }
   @media (min-width: ${props => props.theme.breakpoints.l}) {
     margin: ${props => props.theme.spacing.step * 8}px;
+    margin-left: 0px;
   }
 `;
 export const Button = styled.button`
-  border: 4px solid ${props => props.theme.colors.light};
+  border: 1px solid ${props => props.theme.colors.light};
   border-radius: ${props => props.theme.spacing.step * 4}px;
-  background-color: ${props => props.theme.colors.light};
-  color: ${props => props.theme.colors.dark};
+  background-color: ${props => props.theme.colors.mainBackground};
+  color: ${props => props.theme.colors.primary};
   font-weight: 500;
   padding: ${props => props.theme.spacing.step * 1}px;
-  width: 200px;
-  font-size: ${props => props.theme.fontSizes.large};
+  width: 150px;
+  font-size: ${props => props.theme.fontSizes.medium};
 `;

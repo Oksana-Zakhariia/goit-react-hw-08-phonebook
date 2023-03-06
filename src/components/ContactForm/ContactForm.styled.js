@@ -10,7 +10,7 @@ export const Forma = styled(Form)`
   border-radius: ${props => props.theme.spacing.step * 4}px;
   transition: transform 0.5s ${props => props.theme.animations.cubicBezier};
   padding: 20px;
-  margin-top: ${props => props.theme.spacing.step * 20}px;
+  margin-top: ${props => props.theme.spacing.step * 10}px;
   margin-left: auto;
   margin-right: auto;
 `;
