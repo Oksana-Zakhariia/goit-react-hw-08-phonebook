@@ -14,6 +14,13 @@ export const ContactItem = styled.div`
   margin-left: auto;
   margin-right: auto;
   align-items: center;
+  &:hover,
+  &:focus {
+    background-color: ${props => props.theme.colors.primary};
+    box-shadow: 0px 2px 10px 2px ${props => props.theme.colors.dark};
+    color: ${props => props.theme.colors.dark};
+    border: 2px solid ${props => props.theme.colors.dark};
+  }
 `;
 export const ContactButton = styled.button`
   border: 2px solid ${props => props.theme.colors.light};
@@ -26,8 +33,8 @@ export const ContactButton = styled.button`
   font-size: ${props => props.theme.fontSizes.small};
 `;
 export const NameField = styled.div`
-  width: 200px;
+  width: 250px;
   display: flex;
-  flex-wrap: wrap;'
-  gap: 10px
+  gap: 10px;
+  justify-content: space-around;
 `;

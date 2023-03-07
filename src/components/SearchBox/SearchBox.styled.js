@@ -11,6 +11,13 @@ export const Box = styled.div`
   margin-left: auto;
   margin-right: auto;
   margin-bottom: ${props => props.theme.spacing.step * 5}px;
+  &:hover,
+  &:focus {
+    background-color: ${props => props.theme.colors.primary};
+    box-shadow: 0px 2px 10px 2px ${props => props.theme.colors.dark};
+    color: ${props => props.theme.colors.dark};
+    border: 2px solid ${props => props.theme.colors.dark};
+  }
 `;
 export const SearchLabel = styled.label`
   gap: ${props => props.theme.spacing.step * 3}px;
