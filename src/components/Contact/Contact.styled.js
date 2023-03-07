@@ -28,5 +28,6 @@ export const ContactButton = styled.button`
 export const NameField = styled.div`
   width: 200px;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap;'
+  gap: 10px
 `;
