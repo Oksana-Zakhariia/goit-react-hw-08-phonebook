@@ -29,8 +29,9 @@ export const Button = styled.button`
   font-size: ${props => props.theme.fontSizes.medium};
   &:hover,
   &:focus {
-    background-color: ${props => props.theme.colors.light};
+    background-color: ${props => props.theme.colors.primary};
     box-shadow: 0px 2px 10px 2px ${props => props.theme.colors.light};
+    color: ${props => props.theme.colors.dark};
   }
 `;
 export const UserMenuContainer = styled.div`
