@@ -31,9 +31,16 @@ export const ContactButton = styled.button`
   padding: ${props => props.theme.spacing.step * 1}px;
   width: 60px;
   font-size: ${props => props.theme.fontSizes.small};
+  &:hover,
+  &:focus {
+    background-color: ${props => props.theme.colors.dark};
+    box-shadow: 0px 2px 10px 2px ${props => props.theme.colors.dark};
+    color: ${props => props.theme.colors.primary};
+    border: 2px solid ${props => props.theme.colors.dark};
+  }
 `;
 export const NameField = styled.div`
-  width: 250px;
+  width: 200px;
   display: flex;
   gap: 10px;
   justify-content: space-around;
