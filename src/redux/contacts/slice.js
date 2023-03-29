@@ -1,5 +1,4 @@
 import { createSlice, isAnyOf } from '@reduxjs/toolkit';
-import { object } from 'yup';
 import {
   addContact,
   fetchContacts,
@@ -15,6 +14,7 @@ const contactsSlice = createSlice({
     items: [],
     isLoading: false,
     error: null,
+    isEdited: false,
   },
   extraReducers: builder => {
     return builder
@@ -31,18 +31,38 @@ const contactsSlice = createSlice({
         );
         state.items.splice(index, 1);
       })
+      .addCase(editeContact.pending, state => {
+        state.isLoading = true;
+        state.isEdited = true;
+      })
       .addCase(editeContact.fulfilled, (state, action) => {
-        const index = state.items.findIndex(
-          contact => contact.id === action.payload.id
-        );
-        state.items.splice(index, 1, object);
+        state.isLoading = true;
+        state.isEdited = true;
+        state.error = null;
+        console.log(action.payload);
+        state.items = state.items.reduce((acc, item) => {
+          if (item.id === action.payload.id) {
+            return [...acc, action.payload];
+          }
+          return [
+            ...acc,
+            { id: item.id, name: item.name, number: item.number },
+          ];
+        }, []);
+      })
+      .addCase(editeContact.rejected, (state, action) => {
+        state.isLoading = false;
+        state.error = action.payload;
+        state.isEdited = false;
       })
       .addMatcher(isAnyOf(...getActions('pending')), state => {
         state.isLoading = true;
+        state.isEdited = false;
       })
       .addMatcher(isAnyOf(...getActions('rejected')), (state, action) => {
         state.isLoading = false;
         state.error = action.payload;
+        state.isEdited = false;
       })
       .addMatcher(isAnyOf(...getActions('fulfilled')), state => {
         state.isLoading = false;
